@@ -2,4 +2,5 @@ div.rightBox {
     display: flex;
     justify-content: space-evenly;
     background-color: aquamarine;
+    align-items: center;
 }
