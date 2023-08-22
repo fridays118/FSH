@@ -1,6 +1,11 @@
 div.rightBox {
     display: flex;
+    /* alligning content*/ 
     justify-content: space-evenly;
+    /*Setting bgc */ 
     background-color: aquamarine;
+    /*setting the location of the content */ 
     align-items: center;
+    /*Sets the direction things are put inside of the flex */ 
+    flex-direction: row-reverse;
 }
