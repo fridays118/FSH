@@ -1,3 +1,28 @@
+/*Putting everything in a box*/
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: cadetblue;
+}
+
+#money{
+    /*money is 5 from the left of the screen*/
+    left: 5vw;
+    background-color: aliceblue;
+    color: cadetblue;
+}
+
+#fish{
+    /*an absolute postion allows you to change it*/
+    position: absolute;
+    color: #333;
+}
+
+
+
+/*flex box testing*/
 div.rightBox {
     display: flex;
     /* alligning content*/ 
