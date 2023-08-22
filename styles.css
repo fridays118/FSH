@@ -9,3 +9,10 @@ div.rightBox {
     /*Sets the direction things are put inside of the flex */ 
     flex-direction: row-reverse;
 }
+p.testNumber {
+    /*sets the specific order in the rotation */ 
+    order: 2;
+    /*Aligning the specific */ 
+    align-self: flex-end;
+
+}
