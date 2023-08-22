@@ -1,0 +1,4 @@
+div.rightBox {
+    display: flex;
+    justify-content: flex-end;
+}
