@@ -2,12 +2,18 @@ div.rightBox {
     display: flex;
     /* alligning content*/ 
     justify-content: space-evenly;
+    /* width */
+    width: 60%;
+    /*height */
+    height: max-content;
     /*Setting bgc */ 
     background-color: aquamarine;
     /*setting the location of the content */ 
     align-items: center;
     /*Sets the direction things are put inside of the flex */ 
     flex-direction: row-reverse;
+    /* Spreads them out evenly */
+    flex-wrap:wrap
 }
 p.testNumber {
     /*sets the specific order in the rotation */ 
