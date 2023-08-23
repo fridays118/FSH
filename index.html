@@ -3,34 +3,42 @@
 <head>
     <title>FSH</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <script src="pixi.js"></script>
+    <script src="GameEngine(PIXIJS)/pixi.js"></script>
 </head>
 <body>
 <script>
-    let left = false
-    let speed = 10
-    //making the window / application
+    let left = true
+    let speed = 1
     let app = new PIXI.Application({ width: 640, height: 360 });
-    //showing the application on the screen
     document.body.appendChild(app.view);
-    // Load a sprite
-    let sprite = PIXI.Sprite.from('spaceship.png');
-    //add sprite to the stage
+    let sprite = PIXI.Sprite.from('Assets/spaceship.png');
     app.stage.addChild(sprite);
-    //Variable to count the seconds the game has been running
-    let elapsed = 0.0;
+
+    // Create a Graphics object, set a fill color, draw a rectangle
+    let floor = new PIXI.Graphics();
+    floor.beginFill(0xff0000);
+    floor.drawRect(0, 350, 700, 100);
+    // Add it to the stage to render
+    app.stage.addChild(floor);
+
+    sprite.on('pointerdown', (event) => { 
+            if (left){
+                left = false;
+            }else{
+                left = true;
+            }
+             });
+             sprite.eventMode = 'static';
+
     //Ontick
     app.ticker.add((delta) => {
-        if (sprite.x < -100){
-            left = false;
-        }
-        if(sprite.x > 400){
-            left = true;
-        }
+
         if (left){
             sprite.x -= speed
+            //sprite.alpha = .5
         }else{
             sprite.x += speed
+            //sprite.alpha = 1
         }
     });
 
